@@ -1,0 +1,82 @@
+@use '../../scss' as *;
+
+.header{ 
+    background: linear-gradient(180deg, #2B2F53 3.16%, #1D1C34 36.05%);
+  }
+    .search-bar{
+        @include size(100%,56px);
+        @include flex(center,unset);
+         
+        color: #fff;
+    }
+
+ // searchBar
+    .search{
+    @include size(445px,40px);
+    margin: auto;
+
+    background: linear-gradient(135deg, rgba(15, 85, 232, 0.1) 0%, rgba(157, 223, 243, 0.1) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 40px;
+
+        @include flex(center,space-around);
+        .left{
+            margin-left: 10px;
+            padding: 5px;
+            @include font(13px,400);
+            @include flex(center,center);
+            gap: 10px;
+            svg{
+                font-size: 20px;
+                @include hover(unset,unset);
+            }
+            input{
+                @include size(340px,30px);
+               border: none;
+               background-color: transparent;
+            }
+        }
+        .right{
+            border-radius: 20px;
+            border: 1px solid #fff;
+            @include size(30px,30px);
+            @include flex(center,center);
+            @include hover(unset,unset);
+            svg{
+            @include font(16px,500);
+         }
+        }
+       }
+       .topAction{
+           margin-right: 30px;
+           padding: 6px;
+           text-align: right;
+           @include size(220px,32px);
+           @include font(20px,400);
+        span{
+           border-radius: 20px;
+           padding: 10px;
+           text-align: center;
+            @include hover($hover-bg,unset);
+        }
+    }
+ //segmented-control
+    .segmented-control{
+        @include size(100%,56px);
+        background: linear-gradient(180deg, rgba(196, 39, 251, 0) 0%, rgba(196, 39, 251, 0.2) 82.14%);
+    }
+        li{
+        display: flex;
+        padding: 10px 5px 10px 16px;
+        gap: 24px;
+    
+        a{
+            @include font(15px,600);
+            margin: auto;
+            padding: 8px 16px;
+            border-radius: 20px;
+            @include hover(unset,unset);
+        }
+   }
+    
+  

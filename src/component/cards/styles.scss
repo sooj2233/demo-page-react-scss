@@ -1,0 +1,56 @@
+@use '../../scss' as *;
+.cards{
+   .row1,.row2{
+    @include size(1160px,336px);
+    @include flex(unset,center);
+    flex-direction: row;
+    margin: 32px auto;
+    gap: 16px;
+    padding: 0px;
+
+    .carte{
+        @include size(376px,100%);
+
+        border-radius: 16px;
+    }
+   }
+   img{
+    @include size(376px,209px);
+    border-radius: 16px 16px 0 0 ;
+   }
+   .contente{
+    @include flex(flex-start,center);
+    gap: 16px;
+    padding: 24px 16px;
+    @include size(376px,128px);
+
+    background: linear-gradient(180deg, rgba(72, 49, 157, 0.2) 18.75%, rgba(72, 49, 157, 0) 100%);
+    border-radius: 0px 0px 16px 16px;
+    align-self: stretch;
+
+        img{
+            @include size(40px,40px);
+            border-radius: 20px;
+            
+        }
+        .block-text{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            @include size(288px,94px);
+           
+        }
+        .title{
+            @include size(293px,54px);
+            @include font(17px,700);
+
+            letter-spacing: -0.32px;
+        }
+        .name-views-time{
+            @include size(288px,44px);
+            @include font(12px,400);
+        }
+   }
+
+}

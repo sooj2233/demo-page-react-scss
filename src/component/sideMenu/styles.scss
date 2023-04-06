@@ -1,0 +1,81 @@
+@use '../../scss' as *;
+.sideMenu{
+    @include size(248px,982px);
+    left: 0px;
+    top: 0px;
+
+    border-radius: 20px 0 0 20px ;
+    background: linear-gradient(168.44deg, #2E335A 1.62%, #1C1B33 95.72%);
+
+   .top__dark-mode{
+        margin-top: 22px;
+        margin-left: 22px;
+
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 18px;
+        padding: 5px 0;
+        cursor: pointer;
+
+            &--black{
+                color: #31bb15;}
+            &--red{
+            color: rgb(228, 26, 26);
+            }
+            &--blue{
+                color: rgb(227, 201, 52);
+            }
+   }
+   .top__logo-text{
+        @include size(100%,56px);
+        @include flex(center,flex-start);
+        padding: 0 10px 0 22px ;
+
+        border-radius: 15px;
+        @include hover(unset,unset);
+
+        .logo{
+            padding-right: 10px;
+           font-size: 20px;   
+        }
+        .logo-text{
+            @include font(27px,600);
+        }
+   }
+   .main1,.main2{
+    button{
+        @include size(100%,56px);
+        @include flex(center,flex-start);
+        padding: 0 10px 0 22px ;
+
+        background-color: transparent;
+        border-radius: 15px;
+        border: none;
+        @include hover(unset,unset);
+
+    &.btn{
+        background: radial-gradient(50% 128.57% at 50% -36.61%, #8015A7 0%, rgba(97, 54, 144, 0) 100%);
+        svg{
+          
+        border-radius: 20px;
+        border: 1px solid #fff;
+        }   
+    }
+        svg{
+            @include size(24px,24px);
+            margin: 0 24px 0 0;
+            color: aliceblue;
+        }
+        a{
+            @include font(17px,500);
+        }
+    } 
+    }
+    .text,.bottom{
+        @include size(100%,56px);
+        @include font(13px,600);
+        padding-left: 10px;
+       }
+
+}

@@ -1,0 +1,24 @@
+@mixin flex($align-items,$justify-content){
+    display: flex;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+@mixin size($w,$h){
+    width: $w;
+    height: $h;
+}
+@mixin font($fs,$fw){
+    font-size: $fs;
+    font-weight:$fw ;
+}
+@mixin hover($bg, $color) {
+    &:hover {
+        opacity: 0.8; /* reduce opacity on hover */
+        box-shadow: 0 0 10px rgba(238, 160, 123, 0.848); /* increase box-shadow on hover */
+        transition: opacity 1s ease-in-out, box-shadow 0.3s ease-in-out; 
+        transform: scale(100%);
+        background: $bg;
+        color: $color;
+        cursor: pointer;
+    }
+}

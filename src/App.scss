@@ -1,0 +1,45 @@
+@use './scss' as *;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  position: relative;
+  max-width: 1728px;
+  height: 1117px;
+  margin: auto;
+  font-family: 'Roboto Mono', monospace;
+  background: #2B2C36;
+  color: #fff;
+}
+
+#root {
+    position: absolute;
+    width: 1512px;
+    height: 982px;
+    left: 108px;
+    top: 67px;
+
+    box-shadow: 40px 60px 150px rgba(59, 38, 123, 0.7);
+
+}
+.app{
+  @include size(100%,100%);
+  display: flex;
+
+  .mainContent{
+    @include size(1264px,982px);
+    right: 0;
+    top: 0;
+
+    background: linear-gradient(180deg, #2B2F53 3.16%, #1D1C34 36.05%);
+    box-shadow: -10px 30px 80px rgba(59, 38, 123, 0.7);
+
+    border-radius: 0 20px 20px 0;
+  }
+}
+a{
+  color: #fff;
+  text-decoration: none;
+}
